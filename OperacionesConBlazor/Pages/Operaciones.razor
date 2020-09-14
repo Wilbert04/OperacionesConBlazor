@@ -1,0 +1,58 @@
+﻿@page "/Operaciones"
+
+<h3>Operaciones</h3>
+
+    <div>
+        <label>
+            Primer numero:
+            <input @bind=" PrimerNumero" />
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Segundo numero:
+            <input @bind="SegundoNumero"/>
+        </label>
+    </div>
+
+    <div>
+        <label> Suma: @Sumar(PrimerNumero,SegundoNumero)</label>
+    </div>
+
+    <div>
+        <label> Resta: @Restar(PrimerNumero,SegundoNumero)</label>
+    </div>
+    
+    <div>
+        <label> Multipliacion:@Multiplicar(PrimerNumero,SegundoNumero)</label>
+    </div>
+
+    
+
+@code {
+
+    public int PrimerNumero;
+
+    public int SegundoNumero;
+
+
+    public static int Sumar(int PrimerNumero,int SegundoNumero)
+    {
+        int Total = PrimerNumero + SegundoNumero;
+        return Total;
+    }
+
+     public static int Restar(int PrimerNumero,int SegundoNumero)
+    {
+        int Total = PrimerNumero - SegundoNumero;
+        return Total;
+    }
+
+     public static float Multiplicar(float PrimerNumero,float SegundoNumero)
+    {
+        float Total = PrimerNumero * SegundoNumero;
+        return Total;
+    }
+
+}
